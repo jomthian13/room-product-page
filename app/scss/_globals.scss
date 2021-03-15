@@ -1,0 +1,109 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan";
+  font-size: $font-sm;
+  font-weight: 500;
+  color: $darkGrey;
+}
+
+//Typography
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.15;
+  font-weight: 600;
+  color: $black;
+}
+h1 {
+  font-size: $font-lg;
+}
+h2 {
+  font-size: $font-sm;
+}
+h3 {
+}
+
+p {
+  line-height: 1.5;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+//Spacing
+
+.container {
+  max-width: 69.375rem;
+  margin: auto;
+
+  &--pall {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint-up(medium) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    
+  }
+  &--px {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+  &--py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+  
+  }
+
+}
+
+//Flexbox
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+
+//Visibility
+.hide-for-mobile {
+  //hide for tablet and mobile
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  //hide for desktop view port width
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
