@@ -24,13 +24,16 @@ body {
 h1,
 h2,
 h3 {
-  margin-top: 0;
+  margin: 0;
   line-height: 1.15;
   font-weight: 700;
   color: $black;
 }
 h1 {
   font-size: $font-lg;
+  @include breakpoint-up(large) {
+    font-size: $font-xlg;
+  }
 }
 h2 {
   font-size: $font-sm;
@@ -39,14 +42,25 @@ h3 {
 }
 
 p {
+  margin: 0;
   line-height: 1.6;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 a,
 a:visited,
 a:hover {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
 }
 
 //Spacing
@@ -67,7 +81,6 @@ a:hover {
       padding-top: 4rem;
       padding-bottom: 4rem;
     }
-    
   }
   &--px {
     padding-left: 1.5625rem;
@@ -76,10 +89,7 @@ a:hover {
   &--py {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    
-  
   }
-
 }
 
 //Flexbox
@@ -96,7 +106,6 @@ a:hover {
   }
 }
 
-
 //button
 button,
 .button {
@@ -109,15 +118,12 @@ button,
 
 button:hover,
 button:focus {
-    
 }
 
 button:focus {
-    
 }
 
 button:active {
-    
 }
 
 //Visibility
@@ -135,8 +141,7 @@ button:active {
 }
 .hide-for-desktop {
   //hide for desktop view port width
-  @include breakpoint-up(medium) {
+  @include breakpoint-up(large) {
     display: none;
   }
 }
-

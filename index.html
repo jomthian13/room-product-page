@@ -62,7 +62,7 @@
       <nav class="flex container--pall">
         <a
           href="#"
-          class="header__open hide-for-desktop"
+          class="header__open hide-for-tablet"
           id="btnOpen"
           data-mobile-menu-target="#menu"
         >
@@ -86,7 +86,7 @@
     <section class="hero flex ">
       <div class="hero__images">
 
-        <div class="hero__images__mobile hide-for-desktop">
+        <div class="hero__images__mobile hide-for-tablet">
         <img
             class="size hide-for-tablet"
             src="/images/mobile-image-hero-1.jpg"
@@ -95,16 +95,19 @@
 
           <img
             class="hero__images__inner active"
+            id="mobile--image"
             src="/images/mobile-image-hero-1.jpg"
             alt="mobile-hero-1"
           />
           <img
             class="hero__images__inner"
+            id="mobile--image"
             src="/images/mobile-image-hero-2.jpg"
             alt="mobile-hero-2"
           />
           <img
             class="hero__images__inner"
+            id="mobile--image"
             src="/images/mobile-image-hero-3.jpg"
             alt="mobile-hero-3"
           />
@@ -112,32 +115,52 @@
         <div class="hero__image__desktop hide-for-mobile">
           <img
             class="size hide-for-mobile"
+            
             src="/images/desktop-image-hero-1.jpg"
             alt="desktop-hero-size"
           ></img>
           <img
             class="hero__images__inner active"
+            id="desktop--image"
             src="/images/desktop-image-hero-1.jpg"
             alt="desktop-hero-1"
           />
-          <img class="hero__images__inner" src="/images/desktop-image-hero-2.jpg" alt="desktop-hero-1" />
-          <img class="hero__images__inner" src="/images/desktop-image-hero-3.jpg" alt="desktop-hero-1" />
+          <img 
+            class="hero__images__inner" 
+            id="desktop--image" 
+            src="/images/desktop-image-hero-2.jpg" 
+            alt="desktop-hero-2" 
+          />
+          <img 
+            class="hero__images__inner" 
+            id="desktop--image" 
+            src="/images/desktop-image-hero-3.jpg" 
+            alt="desktop-hero-3" 
+            />
+        </div>
+        <div class="hero__images__control hide-for-desktop">
+          <a id="left--arrow" href="#"><img src="/images/icon-angle-left.svg" alt=""></a>
+          <a id="right--arrow" href="#"><img src="/images/icon-angle-right.svg" alt=""></a>
         </div>
       </div>
-      <div class="hero__cta container--pall">
+      <div class="hero__cta">
         <div class="float--wrapper">
-        <div class="active hero__cta__text ">
-          <h1>Discover innovative ways to decorate</h1>
-          <p>
+          <div class="active hero__cta__text ">
+          <div class="text--wrapper">
+            <h1>Discover innovative ways to decorate</h1>
+            <p>
             We provide unmatched quality, comfort, and style for property owners
             across the country. Our experts combine form and function in
             bringing your vision to life. Create a room in your own style with
             our collection and make your property a reflection of you and what
             you love.
-          </p>
-          
+            </p>
+          </div>
+          <button class="hero__cta__text__btn">SHOP NOW <span class="arrow">&nbsp;<img src="/images/icon-arrow.svg" alt=""></span></button>
+
         </div>
         <div class="hero__cta__text ">
+          <div class="text--wrapper">
           <h1>We are available all across the globe</h1>
           <p>
             With stores all over the world, it's easy for you to find furniture
@@ -145,9 +168,12 @@
             cities throughout the country. Find the branch nearest you using our
             store locator. Any questions? Don't hesitate to contact us today.
           </p>
-          
+        </div>
+          <button class="hero__cta__text__btn">SHOP NOW <span class="arrow">&nbsp;<img src="/images/icon-arrow.svg" alt=""></span></button>
+
         </div>
         <div class="hero__cta__text ">
+          <div class="text--wrapper">
           <h1>Manufactured with the best materials</h1>
           <p>
             Our modern furniture store provide a high level of quality. Our
@@ -156,10 +182,13 @@
             decades of experience in this industry, we understand what customers
             want for their home and office.
           </p>
-          
+        </div>
+          <button class="hero__cta__text__btn">SHOP NOW <span class="arrow">&nbsp;<img src="/images/icon-arrow.svg" alt=""></span></button>
+
         </div>
       </div>
-        <button class="button">SHOP NOW <span class="arrow">&nbsp;<img src="/images/icon-arrow.svg" alt=""></span></button>
+
+        <!-- <button class="button">SHOP NOW <span class="arrow">&nbsp;<img src="/images/icon-arrow.svg" alt=""></span></button> -->
       </div>
     </section>
 
