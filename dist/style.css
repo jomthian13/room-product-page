@@ -301,31 +301,70 @@ button,
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 
 .hero__images__inner.active {
   opacity: 1;
 }
 
-.hero__images__control {
+.hero__images__mobileControl {
   position: absolute;
   bottom: 0;
   right: 0;
   display: flex;
 }
 
-.hero__images__control a {
+@media (min-width: 40em) {
+  .hero__images__mobileControl {
+    display: none;
+  }
+}
+
+.hero__images__mobileControl a {
   background-color: black;
   padding: 20px 23px 20px 23px;
   transition: opacity 200ms ease-in-out;
 }
 
-.hero__images__control a img {
+.hero__images__mobileControl a img {
   width: 80%;
 }
 
-.hero__images__control a:hover {
+.hero__images__mobileControl a:hover {
+  opacity: 0.7;
+}
+
+.hero__images__tabletControl {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+@media (max-width: 39.9375em) {
+  .hero__images__tabletControl {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__images__tabletControl {
+    display: none;
+  }
+}
+
+.hero__images__tabletControl a {
+  background-color: black;
+  padding: 20px 23px 20px 23px;
+  transition: opacity 200ms ease-in-out;
+}
+
+.hero__images__tabletControl a img {
+  width: 80%;
+}
+
+.hero__images__tabletControl a:hover {
   opacity: 0.7;
 }
 
@@ -347,7 +386,6 @@ button,
 }
 
 .hero__cta .float--wrapper {
-  border: 1px solid blue;
   position: relative;
   width: 100%;
   height: 100%;
@@ -358,14 +396,13 @@ button,
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  border: 1px solid red;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
 }
 
 .hero__cta__text.active {
