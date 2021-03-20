@@ -138,13 +138,13 @@
             alt="desktop-hero-3" 
             />
         </div>
-        <div class="hero__images__mobileControl">
-          <a id="mobile--left--arrow" href="#"><img src="/images/icon-angle-left.svg" alt=""></a>
-          <a id="mobile--right--arrow" href="#"><img src="/images/icon-angle-right.svg" alt=""></a>
+        <div class="hero__images__control hide-for-tablet">
+          <a  href="#" data-left-arrow='#mobile--image'><img src="/images/icon-angle-left.svg" alt=""></a>
+          <a  href="#" data-right-arrow='#mobile--image'><img src="/images/icon-angle-right.svg" alt=""></a>
         </div>
-        <div class="hero__images__tabletControl">
-          <a id="tablet--left--arrow" href="#"><img src="/images/icon-angle-left.svg" alt=""></a>
-          <a id="tablet--right--arrow" href="#"><img src="/images/icon-angle-right.svg" alt=""></a>
+        <div class="hero__images__control hide-for-mobile-desktop">
+          <a  href="#" data-left-arrow='#desktop--image'><img src="/images/icon-angle-left.svg" alt=""></a>
+          <a  href="#" data-right-arrow='#desktop--image'><img src="/images/icon-angle-right.svg" alt=""></a>
         </div>
       </div>
       <div class="hero__cta">
@@ -193,15 +193,27 @@
       </div>
 
         <!-- <button class="button">SHOP NOW <span class="arrow">&nbsp;<img src="/images/icon-arrow.svg" alt=""></span></button> -->
+        <div class="hero__images__control hide-for-mobile-tablet">
+          <a  href="#" data-left-arrow='#desktop--image'><img src="/images/icon-angle-left.svg" alt=""></a>
+          <a  href="#" data-right-arrow='#desktop--image'><img src="/images/icon-angle-right.svg" alt=""></a>
+        </div>
       </div>
     </section>
+    <section class="about">
+      <div id="dark" class="about__images__dark"><img src="/images/image-about-dark.jpg" alt=""></div>
+      <div id="text" class="about__text">
+        <h2>ABOUT OUR FURNITURE</h2>
+        <p>Our multifunctional collection blends design and function to suit
+          your individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture pieces
+          you need, from traditional to contemporary styles or anything in between.
+          Product specialists are available to help you create your dream space.
+        </p>
+      </div>
+      <div id="light" class="about__images__light"><img src="/images/image-about-light.jpg" alt=""></div>
+    </section>
 
-    <!-- ------------------------------------------------------ . Shop now About our
-    furniture Our multifunctional collection blends design and function to suit
-    your individual taste. Make each room unique, or pick a cohesive theme that
-    best express your interests and what inspires you. Find the furniture pieces
-    you need, from traditional to contemporary styles or anything in between.
-    Product specialists are available to help you create your dream space. -->
+    
 
     <!-- <div class="attribution">
       Challenge by

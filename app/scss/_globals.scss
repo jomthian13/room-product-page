@@ -17,7 +17,6 @@ body {
   font-size: $font-sm;
   font-weight: 500;
   color: $darkGrey;
-  min-height: 100vh;
 }
 
 //Typography
@@ -131,17 +130,38 @@ button:active {
   //hide for tablet and mobile
   @include breakpoint-down(small) {
     display: none;
+    visibility: hidden;
   }
 }
 .hide-for-tablet {
   //hide for tablet and mobile
   @include breakpoint-up(medium) {
     display: none;
+    visibility: hidden;
   }
 }
 .hide-for-desktop {
   //hide for desktop view port width
   @include breakpoint-up(large) {
     display: none;
+    visibility: hidden;
+  }
+}
+.hide-for-mobile-tablet {
+  //hide for desktop view port width
+  @include breakpoint-down(medium) {
+    display: none;
+    visibility: hidden;
+  }
+}
+.hide-for-mobile-desktop {
+  //hide for desktop view port width
+  @include breakpoint-down(small) {
+    display: none;
+    visibility: hidden;
+  }
+  @include breakpoint-up(large) {
+    display: none;
+    visibility: hidden;
   }
 }

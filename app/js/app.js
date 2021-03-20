@@ -33,47 +33,56 @@ function closeMenu(menu) {
 }
 
 // hero slider
-//mobile
-const mobileImages = document.querySelectorAll("#mobile--image");
+//Selectors
 const heroText = document.querySelectorAll(".hero__cta__text");
-const leftArrow = document.getElementById("mobile--left--arrow");
-const rightArrow = document.getElementById("mobile--right--arrow");
+const leftArrow = document.querySelectorAll("[data-left-arrow]");
+const rightArrow = document.querySelectorAll("[data-right-arrow]");
 
-console.log(heroText);
+//Next-Slide function
+
+rightArrow.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const images = document.querySelectorAll(btn.dataset.rightArrow);
+    nextSlide(images);
+  });
+});
 let i = 0;
-let x = 0;
-
-leftArrow.addEventListener("click", previousSlide);
-rightArrow.addEventListener("click", nextSlide);
-
-function nextSlide() {
-  if (i === mobileImages.length - 1) {
-    mobileImages[i].classList.remove("active");
+function nextSlide(images) {
+  if (i === images.length - 1) {
+    images[i].classList.remove("active");
     heroText[i].classList.remove("active");
     i = 0;
-    mobileImages[i].classList.add("active");
+    images[i].classList.add("active");
     heroText[i].classList.add("active");
   } else {
-    mobileImages[i].classList.remove("active");
+    images[i].classList.remove("active");
     heroText[i].classList.remove("active");
     i++;
-    mobileImages[i].classList.add("active");
+    images[i].classList.add("active");
     heroText[i].classList.add("active");
   }
 }
 
-function previousSlide() {
+//Previous-Slide function
+leftArrow.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const images = document.querySelectorAll(btn.dataset.leftArrow);
+    previousSlide(images);
+  });
+});
+
+function previousSlide(images) {
   if (i === 0) {
-    mobileImages[i].classList.remove("active");
+    images[i].classList.remove("active");
     heroText[i].classList.remove("active");
     i = 2;
-    mobileImages[i].classList.add("active");
+    images[i].classList.add("active");
     heroText[i].classList.add("active");
   } else {
-    mobileImages[i].classList.remove("active");
+    images[i].classList.remove("active");
     heroText[i].classList.remove("active");
     i--;
-    mobileImages[i].classList.add("active");
+    images[i].classList.add("active");
     heroText[i].classList.add("active");
   }
 }

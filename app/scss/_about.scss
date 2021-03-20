@@ -1,0 +1,38 @@
+.about {
+  display: grid;
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "#dark #text"
+      "#light #text";
+  }
+  @include breakpoint-up(large) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+  }
+
+  &__text {
+    padding: 3.875rem 2.125rem 3.875rem 2.125rem;
+    h2 {
+    }
+
+    p {
+    }
+  }
+
+  &__images {
+    &__dark {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__light {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 .header {
   position: relative;
   width: 100%;
-  
+
   .overlay {
     visibility: hidden;
     opacity: 0;
@@ -11,7 +11,6 @@
 
     background-color: rgba(0, 0, 0, 0.521);
     z-index: 1;
-
   }
   &__menu {
     visibility: hidden;
@@ -21,11 +20,6 @@
     font-weight: 700;
     z-index: 2;
     width: inherit;
-
-    @include breakpoint-up(medium) {
-      //justify-content: flex-start;
-    }
-
   }
   nav {
     position: absolute;
@@ -33,12 +27,11 @@
     z-index: 1;
   }
   &__open {
-    //flex: 1;
   }
   &__logo {
     margin-left: 50%;
-    //flex: 1;
-    transform: translateX(-2.03125rem);
+
+    transform: translateX(-2.75rem);
     @include breakpoint-up(medium) {
       margin-left: 0;
       transform: translateX(0rem);
@@ -48,14 +41,12 @@
   &__links {
     @include breakpoint-up(medium) {
       margin-left: 3.5rem;
-      
     }
-    
+
     a {
       position: relative;
       color: $black;
       @include breakpoint-up(medium) {
-        
         color: $white;
       }
       &:not(:last-child) {
@@ -76,10 +67,10 @@
         transition: opacity 300ms ease-in-out;
 
         @include breakpoint-up(medium) {
-          background-color: $white
+          background-color: $white;
         }
       }
-  
+
       &:hover {
         &::after {
           opacity: 1;
@@ -87,5 +78,4 @@
       }
     }
   }
-
 }
