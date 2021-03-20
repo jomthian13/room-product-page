@@ -462,15 +462,12 @@ button,
   display: inline-block;
 }
 
-.about {
-  display: grid;
-}
-
 @media (min-width: 40em) {
   .about {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "#dark #text" "#light #text";
+    grid-template-areas: "dark text" "light text";
   }
 }
 
@@ -478,15 +475,35 @@ button,
   .about {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: none;
+    grid-template-areas: "dark text light";
   }
 }
 
 .about__text {
+  grid-area: text;
   padding: 3.875rem 2.125rem 3.875rem 2.125rem;
+}
+
+@media (min-width: 40em) {
+  .about__text {
+    padding: 1.875rem 2.125rem 3.875rem 2.125rem;
+  }
+}
+
+.about__text h2 {
+  margin-bottom: 1.375rem;
+}
+
+.about__images__dark {
+  grid-area: dark;
 }
 
 .about__images__dark img {
   width: 100%;
+}
+
+.about__images__light {
+  grid-area: light;
 }
 
 .about__images__light img {
